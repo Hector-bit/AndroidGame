@@ -1,4 +1,7 @@
 # AndroidGame
 Android game made with Unity
 
-This is setup on github so me and Luke can work together
+Make sure to have these packages when devloping with Unity. Window >> Package Manager
+
+    - 2D Tilemap Editor
+    - 2D SPrite Package
