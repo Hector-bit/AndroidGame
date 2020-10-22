@@ -15,10 +15,10 @@ public class ropeSystem : MonoBehaviour {
     private SpriteRenderer ropeHingeAnchorSprite;
 
     //2nd set of variables from that one tutorial
-    // public LineRenderer ropeRenderer;
-    // public LayerMask ropeLayerMask;
-    // private float ropeMaxCastDistance = 20f;
-    // private List<Vector2> ropePositions = new List<Vector2>();
+    public LineRenderer ropeRenderer;
+    public LayerMask ropeLayerMask;
+    private float ropeMaxCastDistance = 20f;
+    private List<Vector2> ropePositions = new List<Vector2>();
 
     //More variables 
     // public Vector2 ropeHook;
@@ -36,8 +36,7 @@ public class ropeSystem : MonoBehaviour {
     void Update()
     {
         // 3
-        var worldMousePosition =
-            Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f));
+        var worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f));
         var facingDirection = worldMousePosition - transform.position;
         var aimAngle = Mathf.Atan2(facingDirection.y, facingDirection.x);
         if (aimAngle < 0f)
@@ -59,6 +58,8 @@ public class ropeSystem : MonoBehaviour {
         {
             crosshairSprite.enabled = false;
         }
+
+        HandleInput(aimDirection);
     }
 
     private void SetCrosshairPosition(float aimAngle){
@@ -72,5 +73,47 @@ public class ropeSystem : MonoBehaviour {
         //NOTE: crossHairPosition may be wrong so replace with setCrossHairPosition if so.
         var crossHairPosition = new Vector3(x, y, 0);
         crosshair.transform.position = crossHairPosition;
+    }
+
+    private void HandleInput(Vector2 aimDirection){
+        if (Input.GetMouseButton(0)){
+            if(ropeAttached) return;
+            ropeRenderer.enabled = true;
+
+            var hit = Physics2D.Raycast(playerPosition, aimDirection, ropeMaxCastDistance, ropeLayerMask);
+
+            if(hit.collider != null) {
+                ropeAttached = true;
+                if(!ropePositions.Contains(hit.point)){
+                    //Jump slightly to distance the player a little from the ground after grappling to something
+                    transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 2f), ForceMode2D.Impluse);
+                    ropePositions.Add(hit.point);
+                    ropeJoint.distance = Vector2.Distance(playerPosition, hit.point);
+                    ropeJoint.enabled = true;
+                    ropeHingeAnchorSprite.enabled = true;
+                }
+            }
+
+            else{
+                ropeRenderer.enabled = false;
+                ropeAttached = false;
+                ropeJoint.enabled = false;
+            }
+        }
+
+        if(Input.GetMouseButton(1)){
+            ResetRope();
+        }
+    }
+
+    private void ResetRope(){
+        ropeJoint.enabled = false;
+        ropeAttached = false;
+        playerMovement.isSwinging = false;
+        ropeRenderer.positionCount = 2;
+        ropeRenderer.SetPosition(0, transform.position);
+        ropeRenderer.SetPosition(1, transform.position);
+        ropePositions.Clear()
+        ropeHingeAnchorSprite.enabled = false;
     }
 };
