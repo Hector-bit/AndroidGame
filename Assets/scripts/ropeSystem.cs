@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class ropeSystem : MonoBehaviour {
     // 1
@@ -13,6 +14,7 @@ public class ropeSystem : MonoBehaviour {
     private Vector2 playerPosition;
     private Rigidbody2D ropeHingeAnchorRb;
     private SpriteRenderer ropeHingeAnchorSprite;
+    private bool distanceSet;
 
     //2nd set of variables from that one tutorial
     public LineRenderer ropeRenderer;
@@ -60,6 +62,7 @@ public class ropeSystem : MonoBehaviour {
         }
 
         HandleInput(aimDirection);
+        UpdateRopePositions();
     }
 
     private void SetCrosshairPosition(float aimAngle){
@@ -116,4 +119,64 @@ public class ropeSystem : MonoBehaviour {
         ropePositions.Clear();
         ropeHingeAnchorSprite.enabled = false;
     }
+
+    private void UpdateRopePositions(){
+    // 1
+    if (!ropeAttached)
+    {
+        return;
+    }
+
+    // 2
+    ropeRenderer.positionCount = ropePositions.Count + 1;
+
+    // 3
+    for (var i = ropeRenderer.positionCount - 1; i >= 0; i--)
+    {
+        if (i != ropeRenderer.positionCount - 1) // if not the Last point of line renderer
+        {
+            ropeRenderer.SetPosition(i, ropePositions[i]);
+                
+            // 4
+            if (i == ropePositions.Count - 1 || ropePositions.Count == 1)
+            {
+                var ropePosition = ropePositions[ropePositions.Count - 1];
+                if (ropePositions.Count == 1)
+                {
+                    ropeHingeAnchorRb.transform.position = ropePosition;
+                    if (!distanceSet)
+                    {
+                        ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
+                        distanceSet = true;
+                    }
+                }
+                else
+                {
+                    ropeHingeAnchorRb.transform.position = ropePosition;
+                    if (!distanceSet)
+                    {
+                        ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
+                        distanceSet = true;
+                    }
+                }
+            }
+            // 5
+            else if (i - 1 == ropePositions.IndexOf(ropePositions.Last()))
+            {
+                var ropePosition = ropePositions.Last();
+                ropeHingeAnchorRb.transform.position = ropePosition;
+                if (!distanceSet)
+                {
+                    ropeJoint.distance = Vector2.Distance(transform.position, ropePosition);
+                    distanceSet = true;
+                }
+            }
+        }
+        else
+        {
+            // 6
+            ropeRenderer.SetPosition(i, transform.position);
+        }
+    }
+}
 };
