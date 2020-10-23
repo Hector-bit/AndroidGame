@@ -79,6 +79,7 @@ public class ropeSystem : MonoBehaviour {
     }
 
     private void HandleInput(Vector2 aimDirection){
+        //left click shoots the grapple
         if (Input.GetMouseButton(0)){
             if(ropeAttached) return;
             ropeRenderer.enabled = true;
@@ -103,7 +104,7 @@ public class ropeSystem : MonoBehaviour {
                 ropeJoint.enabled = false;
             }
         }
-
+        //Right click undoes the grapple
         if(Input.GetMouseButton(1)){
             ResetRope();
         }
