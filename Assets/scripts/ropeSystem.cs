@@ -86,7 +86,7 @@ public class ropeSystem : MonoBehaviour {
                 ropeAttached = true;
                 if(!ropePositions.Contains(hit.point)){
                     //Jump slightly to distance the player a little from the ground after grappling to something
-                    transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 2f), ForceMode2D.Impluse);
+                    transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 2f), ForceMode2D.Impulse);
                     ropePositions.Add(hit.point);
                     ropeJoint.distance = Vector2.Distance(playerPosition, hit.point);
                     ropeJoint.enabled = true;
@@ -113,7 +113,7 @@ public class ropeSystem : MonoBehaviour {
         ropeRenderer.positionCount = 2;
         ropeRenderer.SetPosition(0, transform.position);
         ropeRenderer.SetPosition(1, transform.position);
-        ropePositions.Clear()
+        ropePositions.Clear();
         ropeHingeAnchorSprite.enabled = false;
     }
 };

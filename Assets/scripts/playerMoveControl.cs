@@ -10,6 +10,7 @@ public class playerMoveControl : MonoBehaviour
 
     float horizontalMove = 0f;
     bool jump = false;
+    public bool isSwinging;
 
     // Update is called once per frame
     void Update()
