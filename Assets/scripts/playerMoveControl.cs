@@ -8,6 +8,8 @@ public class playerMoveControl : MonoBehaviour
 
     public float runSpeed = 40f;
 
+    public Joystick joystick;
+
     float horizontalMove = 0f;
     bool jump = false;
     public bool isSwinging;
@@ -15,7 +17,7 @@ public class playerMoveControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalMove = joystick.Horizontal * runSpeed;
         if(Input.GetButtonDown("Jump"))
         {
             jump = true;
