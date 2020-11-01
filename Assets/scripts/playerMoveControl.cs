@@ -5,29 +5,54 @@ using UnityEngine;
 public class playerMoveControl : MonoBehaviour
 {
     public myCharCont controller;
-
-    public float runSpeed = 40f;
+    // // public Animator animator;
 
     public Joystick joystick;
 
+    public float runSpeed = 40f;
+
     float horizontalMove = 0f;
-    bool jump = false;
+    
+    bool IsJumping = false;
     public bool isSwinging;
 
     // Update is called once per frame
     void Update()
     {
-        horizontalMove = joystick.Horizontal * runSpeed;
-        if(Input.GetButtonDown("Jump"))
-        {
-            jump = true;
+        if (joystick.Horizontal >= .2f){
+            horizontalMove = runSpeed;
+        } else if (joystick.Horizontal <= -.2f){
+            horizontalMove = -runSpeed;
+        } else {
+            horizontalMove = 0f;
         }
+
+        // animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+        float verticalMove = joystick.Vertical;
+
+        if(verticalMove >= .5f){
+            IsJumping = true;
+            // animator.SetBool("IsJumping", true);
+        }
+
+        // if(verticalMove <= -.5f){
+        //     crouch = true;
+        // } else {
+        //     crouch = false;
+        // }
+    }
+
+    public void OnLanding ()
+    {
+        //Move our character
+        // animator.SetBool("IsJumping", false);
     }
 
     void FixedUpdate ()
     {
         //Move our character
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
-        jump = false;
+        controller.Move(horizontalMove * Time.fixedDeltaTime, false, IsJumping);
+        IsJumping = false;
     }
 }
