@@ -16,6 +16,8 @@ public class ropeSystem : MonoBehaviour {
     private SpriteRenderer ropeHingeAnchorSprite;
     private bool distanceSet;
 
+    public Joystick joyStickTwo;
+
     //2nd set of variables from that one tutorial
     public LineRenderer ropeRenderer;
     public LayerMask ropeLayerMask;
@@ -38,8 +40,9 @@ public class ropeSystem : MonoBehaviour {
     void Update()
     {
         // 3
+        Debug.Log("Horizontal: " + joyStickTwo.Horizontal + "Vertical: " + joyStickTwo.Vertical);
         var worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f));
-        var facingDirection = worldMousePosition - transform.position;
+        var facingDirection = worldMousePosition;
         var aimAngle = Mathf.Atan2(facingDirection.y, facingDirection.x);
         if (aimAngle < 0f)
         {
