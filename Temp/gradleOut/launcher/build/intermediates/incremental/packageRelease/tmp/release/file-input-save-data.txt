@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Nov 02 02:59:27 PST 2020
+#Tue Nov 10 00:35:39 PST 2020
 60.set=ASSET
 52.set=ASSET
 53.base=/home/hector/Desktop/AndroidGame/Temp/gradleOut/launcher/build/intermediates/merged_assets/release/out

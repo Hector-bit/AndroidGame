@@ -10,12 +10,13 @@ public class ropeSystem : MonoBehaviour {
     public Transform crosshair;
     public SpriteRenderer crosshairSprite;
     public playerMoveControl playerMovement;
-    private bool ropeAttached;
+    public bool ropeAttached;
     private Vector2 playerPosition;
     private Rigidbody2D ropeHingeAnchorRb;
     private SpriteRenderer ropeHingeAnchorSprite;
     private bool distanceSet;
 
+    // public Joystick joyStickOne;
     public Joystick joyStickTwo;
 
     //2nd set of variables from that one tutorial
@@ -40,9 +41,9 @@ public class ropeSystem : MonoBehaviour {
     void Update()
     {
         // 3
-        Debug.Log("Horizontal: " + joyStickTwo.Horizontal + "Vertical: " + joyStickTwo.Vertical);
-        var worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f));
-        var facingDirection = worldMousePosition;
+        // Debug.Log("Horizontal: " + joyStickTwo.Horizontal + "Vertical: " + joyStickTwo.Vertical);
+        var worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y));
+        var facingDirection = worldMousePosition - transform.position;
         var aimAngle = Mathf.Atan2(facingDirection.y, facingDirection.x);
         if (aimAngle < 0f)
         {
@@ -58,10 +59,13 @@ public class ropeSystem : MonoBehaviour {
         if (!ropeAttached)
         {
             SetCrosshairPosition(aimAngle);
+            playerMovement.isSwinging = false;
         }
         else
         {
+            playerMovement.isSwinging = true;
             crosshairSprite.enabled = false;
+
         }
 
         HandleInput(aimDirection);
@@ -83,14 +87,17 @@ public class ropeSystem : MonoBehaviour {
 
     private void HandleInput(Vector2 aimDirection){
         //left click shoots the grapple
-        if (Input.GetMouseButton(0)){
+        // Debug.Log("Joystick vertical" + joyStickTwo.Vertical);
+        if (playerMovement.joystick.Vertical <= -.2f){
+            // Debug.Log("LOOK AT ME DADDDDDDDDDD" + ropeAttached + " ||" + ropeRenderer.enabled);
             if(ropeAttached) return;
             ropeRenderer.enabled = true;
-
+            // Debug.Log("left mouse clicked");
             var hit = Physics2D.Raycast(playerPosition, aimDirection, ropeMaxCastDistance, ropeLayerMask);
 
             if(hit.collider != null) {
                 ropeAttached = true;
+                Debug.Log("left joystick did the thing");
                 if(!ropePositions.Contains(hit.point)){
                     //Jump slightly to distance the player a little from the ground after grappling to something
                     transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 2f), ForceMode2D.Impulse);
@@ -109,6 +116,7 @@ public class ropeSystem : MonoBehaviour {
         }
         //Right click undoes the grapple
         if(Input.GetMouseButton(1)){
+            Debug.Log("RIGHT MOUSE CLICKED");
             ResetRope();
         }
     }
