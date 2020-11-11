@@ -121,7 +121,7 @@ public class ropeSystem : MonoBehaviour {
         }
     }
 
-    private void ResetRope(){
+    public void ResetRope(){
         ropeJoint.enabled = false;
         ropeAttached = false;
         playerMovement.isSwinging = false;
