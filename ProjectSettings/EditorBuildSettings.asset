@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Menu.unity
+    guid: cf113ae60beb0e15599a4d510cd4d55d
+  - enabled: 1
     path: Assets/flyingByYou.unity
     guid: d4f48c83ef1e3d2609bc7208c257f25a
   m_configObjects: {}
