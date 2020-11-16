@@ -85,7 +85,7 @@ public class ropeSystem : MonoBehaviour {
         crosshair.transform.position = crossHairPosition;
     }
 
-    private void HandleInput(Vector2 aimDirection){
+    public void HandleInput(Vector2 aimDirection){
         //left click shoots the grapple
         // Debug.Log("Joystick vertical" + joyStickTwo.Vertical);
         if (playerMovement.joystick.Vertical <= -.2f){
