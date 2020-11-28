@@ -28,7 +28,7 @@ public class ropeButton : MonoBehaviour
     {
         if(rope.ropeRenderer.enabled == false)
         {
-            // rope.ropeRenderer.enabled == true;
+            rope.ropeRenderer.enabled = true;
             Debug.Log("Rope swing 'activated'");
         } else 
         {
