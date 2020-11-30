@@ -15,6 +15,7 @@ public class ropeSystem : MonoBehaviour {
     private Rigidbody2D ropeHingeAnchorRb;
     private SpriteRenderer ropeHingeAnchorSprite;
     private bool distanceSet;
+    private bool grappleThing;
 
     // public Joystick joyStickOne;
     public Joystick joyStickTwo;
@@ -33,6 +34,7 @@ public class ropeSystem : MonoBehaviour {
     {
         // 2
         ropeJoint.enabled = false;
+        grappleThing = false;
         playerPosition = transform.position;
         ropeHingeAnchorRb = ropeHingeAnchor.GetComponent<Rigidbody2D>();
         ropeHingeAnchorSprite = ropeHingeAnchor.GetComponent<SpriteRenderer>();
@@ -85,10 +87,23 @@ public class ropeSystem : MonoBehaviour {
         crosshair.transform.position = crossHairPosition;
     }
 
+    public void grappleTrue(){
+        if(grappleThing == false)
+        {
+            grappleThing = true;
+        } 
+        else
+        {
+            grappleThing = false;
+            ResetRope();
+        }
+        UpdateRopePositions();
+    }
+
     public void HandleInput(Vector2 aimDirection){
         //left click shoots the grapple
         // Debug.Log("Joystick vertical" + joyStickTwo.Vertical);
-        if (playerMovement.joystick.Vertical <= -.2f){
+        if (grappleThing == true){
             // Debug.Log("LOOK AT ME DADDDDDDDDDD" + ropeAttached + " ||" + ropeRenderer.enabled);
             if(ropeAttached) return;
             ropeRenderer.enabled = true;

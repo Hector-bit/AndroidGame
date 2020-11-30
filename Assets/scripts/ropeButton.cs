@@ -23,8 +23,8 @@ public class ropeButton : MonoBehaviour
         if (canvas == null)
             Debug.LogError("The button is not within the rectangle");
     }
-    // Update is called once per frame
-    void GrappleClicked()
+
+    public void GrappleClicked()
     {
         if(rope.ropeRenderer.enabled == false)
         {
