@@ -592,8 +592,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 160655126}
-        m_MethodName: GrappleObject
+      - m_Target: {fileID: 160655125}
+        m_MethodName: grappleTrue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
