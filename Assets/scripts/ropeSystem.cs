@@ -17,10 +17,10 @@ public class ropeSystem : MonoBehaviour {
     private bool distanceSet;
     private bool grappleThing;
 
-    // public Joystick joyStickOne;
+    //This joystick should control where the grapple will aim
     public Joystick joyStickTwo;
 
-    //2nd set of variables from that one tutorial
+    //Grapple variables for physics
     public LineRenderer ropeRenderer;
     public LayerMask ropeLayerMask;
     private float ropeMaxCastDistance = 20f;
@@ -44,19 +44,20 @@ public class ropeSystem : MonoBehaviour {
     {
         // 3
         // Debug.Log("Horizontal: " + joyStickTwo.Horizontal + "Vertical: " + joyStickTwo.Vertical);
-        var worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y));
+        var worldMousePosition = (new Vector3(joyStickTwo.Horizontal * 50f, joyStickTwo.Vertical * 50f));
         Debug.Log(worldMousePosition + "WORLDMOUSEPOSITION");
         var facingDirection = worldMousePosition - transform.position;
         var aimAngle = Mathf.Atan2(facingDirection.y, facingDirection.x);
-        Debug.Log(facingDirection + "FacingDirection");
         Debug.Log(aimAngle + "AIMANGLE");
+        Debug.Log(transform.position + "--PLAYER POSITON--" + playerPosition);
         if (aimAngle < 0f)
         {
             aimAngle = Mathf.PI * 2 + aimAngle;
         }
-
+        Debug.Log(aimAngle + "=========AIMANGLE=======2==========");
         // 4
         var aimDirection = Quaternion.Euler(0, 0, aimAngle * Mathf.Rad2Deg) * Vector2.right;
+        Debug.Log(aimDirection + "AIM DIRECTION BITCHES");
         // 5
         playerPosition = transform.position;
 
@@ -70,7 +71,6 @@ public class ropeSystem : MonoBehaviour {
         {
             playerMovement.isSwinging = true;
             crosshairSprite.enabled = false;
-
         }
 
         HandleInput(aimDirection);
