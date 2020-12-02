@@ -45,8 +45,11 @@ public class ropeSystem : MonoBehaviour {
         // 3
         // Debug.Log("Horizontal: " + joyStickTwo.Horizontal + "Vertical: " + joyStickTwo.Vertical);
         var worldMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y));
+        Debug.Log(worldMousePosition + "WORLDMOUSEPOSITION");
         var facingDirection = worldMousePosition - transform.position;
         var aimAngle = Mathf.Atan2(facingDirection.y, facingDirection.x);
+        Debug.Log(facingDirection + "FacingDirection");
+        Debug.Log(aimAngle + "AIMANGLE");
         if (aimAngle < 0f)
         {
             aimAngle = Mathf.PI * 2 + aimAngle;
