@@ -30,6 +30,10 @@ public class ropeSystem : MonoBehaviour {
     // public Vector2 ropeHook;
     // public float swingForce = 4f;
 
+    // This variable should act as memory for the grapple aim so that is doesn't aim 
+    // at its default position
+    public float AimMemory;
+
     void Awake()
     {
         // 2
@@ -38,33 +42,40 @@ public class ropeSystem : MonoBehaviour {
         playerPosition = transform.position;
         ropeHingeAnchorRb = ropeHingeAnchor.GetComponent<Rigidbody2D>();
         ropeHingeAnchorSprite = ropeHingeAnchor.GetComponent<SpriteRenderer>();
+        AimMemory = 90;
     }
 
     void Update()
     {
         // 3
-        // Debug.Log("Horizontal: " + joyStickTwo.Horizontal + "Vertical: " + joyStickTwo.Vertical);
+        Debug.Log("Horizontal: " + joyStickTwo.Horizontal + "Vertical: " + joyStickTwo.Vertical);
         var worldMousePosition = (new Vector3(joyStickTwo.Horizontal * 50f, joyStickTwo.Vertical * 50f));
-        Debug.Log(worldMousePosition + "WORLDMOUSEPOSITION");
+        // Debug.Log(worldMousePosition + "WORLDMOUSEPOSITION");
         var facingDirection = worldMousePosition - transform.position;
         var aimAngle = Mathf.Atan2(facingDirection.y, facingDirection.x);
-        Debug.Log(aimAngle + "AIMANGLE");
-        Debug.Log(transform.position + "--PLAYER POSITON--" + playerPosition);
+        // Debug.Log(aimAngle + "AIMANGLE");
+        // Debug.Log(transform.position + "--PLAYER POSITON--" + playerPosition);
         if (aimAngle < 0f)
         {
             aimAngle = Mathf.PI * 2 + aimAngle;
         }
-        Debug.Log(aimAngle + "=========AIMANGLE=======2==========");
+        if (AimMemory != aimAngle)
+        {
+            AimMemory = aimAngle;
+        }
+        Debug.Log("Here" + aimAngle);
+        Debug.Log("======AIMMEM=======" + AimMemory);
+        // Debug.Log(aimAngle + "=========AIMANGLE=======2==========");
         // 4
-        var aimDirection = Quaternion.Euler(0, 0, aimAngle * Mathf.Rad2Deg) * Vector2.right;
-        Debug.Log(aimDirection + "AIM DIRECTION BITCHES");
+        var aimDirection = Quaternion.Euler(0, 0, AimMemory * Mathf.Rad2Deg) * Vector2.right;
+        // Debug.Log(aimDirection + "AIM DIRECTION BITCHES");
         // 5
         playerPosition = transform.position;
 
         // 6
         if (!ropeAttached)
         {
-            SetCrosshairPosition(aimAngle);
+            SetCrosshairPosition(AimMemory);
             playerMovement.isSwinging = false;
         }
         else
@@ -77,13 +88,13 @@ public class ropeSystem : MonoBehaviour {
         UpdateRopePositions();
     }
 
-    private void SetCrosshairPosition(float aimAngle){
+    private void SetCrosshairPosition(float AimMemory){
         if(!crosshairSprite.enabled){
             crosshairSprite.enabled = true;
         }
 
-        var x = transform.position.x + 1f * Mathf.Cos(aimAngle);
-        var y = transform.position.y + 1f * Mathf.Sin(aimAngle);
+        var x = transform.position.x + 1f * Mathf.Cos(AimMemory);
+        var y = transform.position.y + 1f * Mathf.Sin(AimMemory);
 
         //NOTE: crossHairPosition may be wrong so replace with setCrossHairPosition if so.
         var crossHairPosition = new Vector3(x, y, 0);
