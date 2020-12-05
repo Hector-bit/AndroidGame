@@ -61,6 +61,7 @@ public class ropeSystem : MonoBehaviour {
         }
         if (AimMemory != aimAngle)
         {
+            Debug.Log("not zero lol");
             AimMemory = aimAngle;
         }
         Debug.Log("Here" + aimAngle);

@@ -83,8 +83,8 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
             if (magnitude > 1)
                 input = normalised;
         }
-        else
-            input = Vector2.zero;
+        // else
+        //     input = Vector2.zero;
     }
 
     private void FormatInput()
@@ -135,6 +135,7 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
         handle.anchoredPosition = Vector2.zero;
     }
 
+    // ScreenPointToAnchoredPosition is for the Dynamic joystick
     protected Vector2 ScreenPointToAnchoredPosition(Vector2 screenPosition)
     {
         Vector2 localPoint = Vector2.zero;
