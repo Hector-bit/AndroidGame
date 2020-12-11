@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class levelSelect : MonoBehaviour
 {
-    [SerializedField] private bool unlocked; 
+    [SerializeField] private bool unlocked; 
     public Image unlockImage; //find a way to use a dimmed version of the planet instead of an image
     // public GameObject[] stars;
     
@@ -15,6 +16,12 @@ public class levelSelect : MonoBehaviour
             unlockImage.gameObject.SetActive(true);
         } else {
             unlockImage.gameObject.SetActive(false);
+        }
+    }
+
+    private void PressSeclections(string levelName){
+        if(unlocked){
+            SceneManager.LoadScene();
         }
     }
 }
