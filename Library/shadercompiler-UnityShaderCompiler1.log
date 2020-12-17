@@ -1,5 +1,2 @@
 Base path: '/home/hector/2019.4.12f1/Editor/Data', plugins path '/home/hector/2019.4.12f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: compileComputeKernel
-  api=15 insize=1957 outsize=3376 ok=1
