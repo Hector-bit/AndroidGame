@@ -11,6 +11,7 @@ public class JoystickEditor : Editor
     private SerializedProperty axisOptions;
     private SerializedProperty snapX;
     private SerializedProperty snapY;
+    private SerializedProperty stickyJoystick;
     protected SerializedProperty background;
     private SerializedProperty handle;
 
@@ -23,6 +24,7 @@ public class JoystickEditor : Editor
         axisOptions = serializedObject.FindProperty("axisOptions");
         snapX = serializedObject.FindProperty("snapX");
         snapY = serializedObject.FindProperty("snapY");
+        stickyJoystick = serializedObject.FindProperty("stickyJoystick");
         background = serializedObject.FindProperty("background");
         handle = serializedObject.FindProperty("handle");
     }
@@ -54,6 +56,7 @@ public class JoystickEditor : Editor
         EditorGUILayout.PropertyField(axisOptions, new GUIContent("Axis Options", "Which axes the joystick uses."));
         EditorGUILayout.PropertyField(snapX, new GUIContent("Snap X", "Snap the horizontal input to a whole value."));
         EditorGUILayout.PropertyField(snapY, new GUIContent("Snap Y", "Snap the vertical input to a whole value."));
+        EditorGUILayout.PropertyField(stickyJoystick, new GUIContent("StickJoystick", "will make it so that the joystick doesn't reset to zero"));
     }
 
     protected virtual void DrawComponents()

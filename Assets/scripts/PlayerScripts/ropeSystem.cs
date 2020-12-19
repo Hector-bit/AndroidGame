@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 
 public class ropeSystem : MonoBehaviour {
-    // 1
+    //NOTE: instances of just transform.position refers to the object that this script is attached to
     public GameObject ropeHingeAnchor;
     public DistanceJoint2D ropeJoint;
     public Transform crosshair;
@@ -32,7 +32,7 @@ public class ropeSystem : MonoBehaviour {
 
     // This variable should act as memory for the grapple aim so that is doesn't aim 
     // at its default position
-    public float AimMemory;
+    // public float AimMemory;
 
     void Awake()
     {
@@ -48,10 +48,11 @@ public class ropeSystem : MonoBehaviour {
     void Update()
     {
         // 3
-        // Debug.Log("Horizontal: " + joyStickTwo.Horizontal + "Vertical: " + joyStickTwo.Vertical);
+        Debug.Log("Horizontal: " + joyStickTwo.Horizontal + "Vertical: " + joyStickTwo.Vertical);
         var joystickPosition = (new Vector3(joyStickTwo.Horizontal, joyStickTwo.Vertical));
-        var facingDirection = joystickPosition - transform.position;
-        var aimAngle = Mathf.Atan2(facingDirection.y, facingDirection.x);
+        // var facingDirection = joystickPosition;
+        Debug.Log("X:" + joystickPosition.y + "Y:" + joystickPosition.y);
+        var aimAngle = Mathf.Atan2(joystickPosition.y, joystickPosition.x);
         if (aimAngle < 0f)
         {
             aimAngle = Mathf.PI * 2 + aimAngle;

@@ -24,12 +24,14 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
     public AxisOptions AxisOptions { get { return AxisOptions; } set { axisOptions = value; } }
     public bool SnapX { get { return snapX; } set { snapX = value; } }
     public bool SnapY { get { return snapY; } set { snapY = value; } }
+    public bool StickyJoystick { get { return stickyJoystick; } set { StickyJoystick = value; }}
 
     [SerializeField] private float handleRange = 1;
     [SerializeField] private float deadZone = 0;
     [SerializeField] private AxisOptions axisOptions = AxisOptions.Both;
     [SerializeField] private bool snapX = false;
     [SerializeField] private bool snapY = false;
+    [SerializeField] private bool stickyJoystick = false;
 
     [SerializeField] protected RectTransform background = null;
     [SerializeField] private RectTransform handle = null;
@@ -83,8 +85,8 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
             if (magnitude > 1)
                 input = normalised;
         }
-        // else
-        //     input = Vector2.zero;
+        else
+            return;
     }
 
     private void FormatInput()
@@ -128,11 +130,16 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
         }
         return 0;
     }
-
+    
     public virtual void OnPointerUp(PointerEventData eventData)
     {
-        input = Vector2.zero;
-        handle.anchoredPosition = Vector2.zero;
+        //input = Vector2.zero makes it so that the joystick resets at zero if no input is detected
+        Debug.Log("stickJoystick turned out to be false loser");
+        if (StickyJoystick == false)
+        {
+            input = Vector2.zero;
+            handle.anchoredPosition = Vector2.zero;
+        }
     }
 
     // ScreenPointToAnchoredPosition is for the Dynamic joystick
