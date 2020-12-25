@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class stats : MonoBehaviour
 {
-    public string[] planetBadges = new string[] {"moonBadge"};
+    public string[] planetBadges = new string[] {"moonBadge", "marsBadge", "planetOneBadge"};
 }
