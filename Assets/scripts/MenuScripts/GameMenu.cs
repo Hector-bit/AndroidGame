@@ -1,22 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
-    [SerializeField] private bool Gamemenu;
+    [SerializeField] private bool inGameMenu;
+    public Canvas In_Game_Menu;
 
     private void start(){
-        GameMenu = false;
+        inGameMenu = false;
     }
 
 
     //This function will be added to a button that will open and close the menu
     private void menuSelection(){
-        if(GameMenu == false){
-            GameMenu = true;
+        if(inGameMenu == false){
+            inGameMenu = true;
         } else {
-            GameMenu = false;
+            inGameMenu = false;
+        }
+        inGameMenuCheck();
+    }
+
+    private void inGameMenuCheck(){
+        if(inGameMenu == true){
+            In_Game_Menu.GetComponent<Canvas>().enabled = true;
+        } else {
+            In_Game_Menu.GetComponent<Canvas>().enabled = false;
         }
     }
 }
