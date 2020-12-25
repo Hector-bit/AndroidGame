@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//rewrite this code using the word pause somewhere
+//chances are your confused because I am too and I just wrote this
+
 public class GameMenu : MonoBehaviour
 {
     [SerializeField] private bool inGameMenu;
@@ -15,7 +18,7 @@ public class GameMenu : MonoBehaviour
 
 
     //This function will be added to a button that will open and close the menu
-    private void menuSelection(){
+    public void menuSelection(){
         if(inGameMenu == false){
             inGameMenu = true;
         } else {
