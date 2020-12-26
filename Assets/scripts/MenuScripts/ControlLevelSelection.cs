@@ -22,17 +22,18 @@ public class ControlLevelSelection : stats
         foreach (string badge in planetBadges)
         {
             Debug.Log(badge);
-            if(badge == "moonBadge"){moonUnlocked = true;}
-            if(badge == "marsBadge"){marsUnlocked = true;}
+            if(badge == "moonBadge"){moonUnlocked = true; UpdateLevelImage(moonUnlocked, moonUnlockImage);}
+            if(badge == "marsBadge"){marsUnlocked = true; UpdateLevelImage(marsUnlocked, marsUnlockImage);}
+            if(badge == "planetOneBadge"){planetOneUnlocked = true; UpdateLevelImage(planetOneUnlocked, planetOneUnlockImage);}
         }
 
-        UpdateLevelImage(moonUnlocked, moonUnlockImage);
+        // UpdateLevelImage(moonUnlocked, moonUnlockImage);
     }
     
     private void UpdateLevelImage(bool moon, Image image)
     {
         if(moon == true){
-            image.gameObject.SetActive(false);
+            image.gameObject.SetActive(true);
         } else {
             image.gameObject.SetActive(false);
         }
