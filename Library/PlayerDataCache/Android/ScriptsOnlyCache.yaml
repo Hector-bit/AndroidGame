@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ControlLevelSelection
     - FixedJoystick
     - GameMenu
     - LevelSelection
@@ -333,6 +334,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13094}
     - Class: 114
       Script: {instanceID: 13512}
+    - Class: 114
+      Script: {instanceID: 23136}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -746,7 +749,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: d9797d4485ad482895af66b76c188252
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelSelection
@@ -1104,6 +1107,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameMenu
+  - hash:
+      serializedVersion: 2
+      Hash: f08b518ee29c60ba1c6ab7808ddf66cc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ControlLevelSelection
   platform: 13
   scenePathNames:
   - Assets/Menu.unity
