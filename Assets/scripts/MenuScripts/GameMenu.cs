@@ -9,12 +9,12 @@ using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
-    [SerializeField] private bool inGameMenu;
-    public Canvas In_Game_Menu;
+    [SerializeField] private bool inGameMenu = false;
+    public GameObject In_Game_Menu;
 
-    private void start(){
-        inGameMenu = false;
-    }
+    // private void start(){
+    //     inGameMenu = false;
+    // }
 
 
     //This function will be added to a button that will open and close the menu
@@ -29,9 +29,11 @@ public class GameMenu : MonoBehaviour
 
     private void inGameMenuCheck(){
         if(inGameMenu == true){
-            In_Game_Menu.GetComponent<Canvas>().enabled = true;
+            // In_Game_Menu.GetComponent<Canvas>().enabled = true;
+            In_Game_Menu.gameObject.SetActive(true);
         } else {
-            In_Game_Menu.GetComponent<Canvas>().enabled = false;
+            // In_Game_Menu.GetComponent<Canvas>().enabled = false;
+            In_Game_Menu.gameObject.SetActive(false);
         }
     }
 }
