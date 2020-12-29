@@ -133,7 +133,7 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
     
     public virtual void OnPointerUp(PointerEventData eventData)
     {
-        //input = Vector2.zero makes it so that the joystick resets at zero if no input is detected
+        //"input = Vector2.zero" makes it so that the joystick resets at zero if no input is detected
         Debug.Log("stickJoystick turned out to be false loser");
         if (StickyJoystick == false)
         {
