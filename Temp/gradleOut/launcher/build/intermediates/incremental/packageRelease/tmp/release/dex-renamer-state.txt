@@ -1,4 +1,4 @@
-#Thu Dec 31 00:36:20 PST 2020
+#Thu Dec 31 22:41:25 PST 2020
 base.0=/home/hector/Desktop/AndroidGame/Temp/gradleOut/launcher/build/intermediates/transforms/dexMerger/release/0
 path.0=classes.dex
 renamed.0=classes.dex

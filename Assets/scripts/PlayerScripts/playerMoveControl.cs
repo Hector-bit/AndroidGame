@@ -8,8 +8,8 @@ public class playerMoveControl : MonoBehaviour
     // // public Animator animator;
     public Joystick joystick;
 
-    public float swingForce = 4f;
-    public float speed = 40f;
+    public float swingForce = 2f;
+    public float speed = 20f;
     public Vector2 ropeHook;
     public bool isSwinging;
     public bool groundCheck;

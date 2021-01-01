@@ -1496,7 +1496,6 @@ GameObject:
   - component: {fileID: 1272806182}
   - component: {fileID: 1272806181}
   - component: {fileID: 1272806180}
-  - component: {fileID: 1272806179}
   - component: {fileID: 1272806178}
   - component: {fileID: 1272806177}
   - component: {fileID: 1272806176}
@@ -1716,20 +1715,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1272806179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272806172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8935cfabff262207e855a48adf2d6c4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rope: {fileID: 1272806180}
-  grappleButton: {fileID: 0}
 --- !u!114 &1272806180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3208,8 +3193,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909273200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.61, y: -4.48, z: 22.157227}
-  m_LocalScale: {x: 2.8856282, y: 2.8367918, z: 2}
+  m_LocalPosition: {x: -0.52, y: -0.02, z: 22.157227}
+  m_LocalScale: {x: 2.549828, y: 2.016732, z: 2}
   m_Children: []
   m_Father: {fileID: 298101404}
   m_RootOrder: 1
