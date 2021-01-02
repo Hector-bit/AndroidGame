@@ -70,6 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4449105358601596641}
   - component: {fileID: 4449105358601596642}
+  - component: {fileID: 4449105358601596648}
   - component: {fileID: 4449105358601596651}
   - component: {fileID: 4449105358601596645}
   - component: {fileID: 4449105358601596646}
@@ -79,7 +80,6 @@ GameObject:
   - component: {fileID: 4449105358601596644}
   - component: {fileID: 4449105358601596650}
   - component: {fileID: 4449105358601596655}
-  - component: {fileID: 4449105358601596648}
   m_Layer: 8
   m_Name: playerOne
   m_TagString: Untagged
@@ -155,6 +155,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4449105358601596648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4449105358601596643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160b17468b8373433934c06fee3f49a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4449105358601596651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,25 +443,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4449105358601596648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4449105358601596643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 160b17468b8373433934c06fee3f49a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  planetBadges:
-  - moonBadge
-  - marsBadge
-  - planetOneBadge
-  respawnPoint: {fileID: 0}
-  playerPrefab: {fileID: 4449105358601596643}
-  cam: {fileID: 0}
 --- !u!1 &4449105358960131979
 GameObject:
   m_ObjectHideFlags: 0
