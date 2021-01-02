@@ -4,12 +4,12 @@ using UnityEngine;
 
 //Player dies then respawns with this script
 
-public class Death : MonoBehaviour
+public class Death : Stats
 {
-   public void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("Enemy")) {
+   private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("DeathZone")) {
             Destroy(gameObject);
-            stats.instance.Respawn();
+            Stats.instance.Respawn();
         }
     }
 }
