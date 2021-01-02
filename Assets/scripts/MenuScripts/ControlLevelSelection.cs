@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ControlLevelSelection : stats
+public class ControlLevelSelection : Stats
 {
     [SerializeField] private bool moonUnlocked = false;
     [SerializeField] private bool marsUnlocked = false; 
