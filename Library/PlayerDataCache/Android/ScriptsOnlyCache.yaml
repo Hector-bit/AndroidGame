@@ -8,7 +8,6 @@ ScriptsOnlyBuild:
     - MainMenu
     - myCharCont
     - playerMoveControl
-    - ropeButton
     - ropeSystem
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
@@ -16,7 +15,6 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineVirtualCamera
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
@@ -106,17 +104,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12846}
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 13096}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 13208}
     - Class: 114
-      Script: {instanceID: 13210}
+      Script: {instanceID: 13230}
     - Class: 114
-      Script: {instanceID: 13232}
+      Script: {instanceID: 13484}
     - Class: 114
-      Script: {instanceID: 13486}
-    - Class: 114
-      Script: {instanceID: 13516}
+      Script: {instanceID: 13514}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -203,17 +199,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12846}
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 13096}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 13208}
     - Class: 114
-      Script: {instanceID: 13210}
+      Script: {instanceID: 13230}
     - Class: 114
-      Script: {instanceID: 13232}
+      Script: {instanceID: 13484}
     - Class: 114
-      Script: {instanceID: 13486}
-    - Class: 114
-      Script: {instanceID: 13516}
+      Script: {instanceID: 13514}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -300,17 +294,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12846}
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 13096}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 13208}
     - Class: 114
-      Script: {instanceID: 13210}
+      Script: {instanceID: 13230}
     - Class: 114
-      Script: {instanceID: 13232}
+      Script: {instanceID: 13484}
     - Class: 114
-      Script: {instanceID: 13486}
-    - Class: 114
-      Script: {instanceID: 13516}
+      Script: {instanceID: 13514}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -381,15 +373,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12772}
     - Class: 114
-      Script: {instanceID: 13024}
+      Script: {instanceID: 13022}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 13096}
     - Class: 114
-      Script: {instanceID: 13288}
+      Script: {instanceID: 13286}
     - Class: 114
-      Script: {instanceID: 13402}
+      Script: {instanceID: 13400}
     - Class: 114
-      Script: {instanceID: 13516}
+      Script: {instanceID: 13514}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -440,9 +432,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12606}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 13096}
     - Class: 114
-      Script: {instanceID: 13516}
+      Script: {instanceID: 13514}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1012,12 +1004,6 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineImpulseSource
-  - hash:
-      serializedVersion: 2
-      Hash: eed4204dd91ab62dc2497e64d793d243
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ropeButton
   - hash:
       serializedVersion: 2
       Hash: 6939772cb3ce775a8e8d99f332534491
