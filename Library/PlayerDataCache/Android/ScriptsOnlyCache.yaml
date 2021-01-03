@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ControlLevelSelection
+    - DeathZone
     - FixedJoystick
     - GameMenu
     - LevelSelection
@@ -15,9 +16,14 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineVirtualCamera
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
+    - UnityEditor.Tilemaps.GridPaintPaletteClipboard
+    - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
+    - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -104,15 +110,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12846}
     - Class: 114
-      Script: {instanceID: 13096}
+      Script: {instanceID: 12850}
     - Class: 114
-      Script: {instanceID: 13208}
+      Script: {instanceID: 13098}
     - Class: 114
-      Script: {instanceID: 13230}
+      Script: {instanceID: 13210}
     - Class: 114
-      Script: {instanceID: 13484}
+      Script: {instanceID: 13232}
     - Class: 114
-      Script: {instanceID: 13514}
+      Script: {instanceID: 13486}
+    - Class: 114
+      Script: {instanceID: 13516}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -199,15 +207,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12846}
     - Class: 114
-      Script: {instanceID: 13096}
+      Script: {instanceID: 12850}
     - Class: 114
-      Script: {instanceID: 13208}
+      Script: {instanceID: 13098}
     - Class: 114
-      Script: {instanceID: 13230}
+      Script: {instanceID: 13210}
     - Class: 114
-      Script: {instanceID: 13484}
+      Script: {instanceID: 13232}
     - Class: 114
-      Script: {instanceID: 13514}
+      Script: {instanceID: 13486}
+    - Class: 114
+      Script: {instanceID: 13516}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -294,15 +304,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12846}
     - Class: 114
-      Script: {instanceID: 13096}
+      Script: {instanceID: 12850}
     - Class: 114
-      Script: {instanceID: 13208}
+      Script: {instanceID: 13098}
     - Class: 114
-      Script: {instanceID: 13230}
+      Script: {instanceID: 13210}
     - Class: 114
-      Script: {instanceID: 13484}
+      Script: {instanceID: 13232}
     - Class: 114
-      Script: {instanceID: 13514}
+      Script: {instanceID: 13486}
+    - Class: 114
+      Script: {instanceID: 13516}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -373,15 +385,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12772}
     - Class: 114
-      Script: {instanceID: 13022}
+      Script: {instanceID: 13024}
     - Class: 114
-      Script: {instanceID: 13096}
+      Script: {instanceID: 13098}
     - Class: 114
-      Script: {instanceID: 13286}
+      Script: {instanceID: 13288}
     - Class: 114
-      Script: {instanceID: 13400}
+      Script: {instanceID: 13402}
     - Class: 114
-      Script: {instanceID: 13514}
+      Script: {instanceID: 13516}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -432,9 +444,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12606}
     - Class: 114
-      Script: {instanceID: 13096}
+      Script: {instanceID: 13098}
     - Class: 114
-      Script: {instanceID: 13514}
+      Script: {instanceID: 13516}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -982,6 +994,12 @@ ScriptsOnlyBuild:
     className: FixedJoystick
   - hash:
       serializedVersion: 2
+      Hash: de8bfb9b5b65df11e1dfaa5187a85a73
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DeathZone
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1195,7 +1213,7 @@ ScriptsOnlyBuild:
       Hash: d8605ed06a102a78cd97486ce52afca9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: stats
+    className: Stats
   - hash:
       serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
