@@ -4720,11 +4720,21 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 2060268112}
+    - target: {fileID: 4449105358601596645, guid: be440b33fa9148417ac10a3d669b8f2d,
+        type: 3}
+      propertyPath: swingForce
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4449105358601596646, guid: be440b33fa9148417ac10a3d669b8f2d,
         type: 3}
       propertyPath: joyStickTwo
       value: 
       objectReference: {fileID: 1176052750}
+    - target: {fileID: 4449105358601596651, guid: be440b33fa9148417ac10a3d669b8f2d,
+        type: 3}
+      propertyPath: m_JumpForce
+      value: 140
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4449105358601596648, guid: be440b33fa9148417ac10a3d669b8f2d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: be440b33fa9148417ac10a3d669b8f2d, type: 3}
