@@ -810,6 +810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 648947227}
   - component: {fileID: 648947226}
+  - component: {fileID: 648947228}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -864,7 +865,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &648947227
@@ -881,6 +882,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &648947228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648947225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40521e1cc9dac766897d0e0e6bfbdb69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &824247409 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252285020697096, guid: aaa2c939c0359ac4dbce3f49e8b90252,

@@ -1,7 +1,148 @@
 fileFormatVersion: 2
 guid: 2e7cb60a38579618d8ee1031108661cc
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7127769706924348086
+    second: SpaceShip_0
+  - first:
+      213: 1960394273175592265
+    second: SpaceShip_1
+  - first:
+      213: -1610066344116194006
+    second: SpaceShip_2
+  - first:
+      213: -1022160547581158302
+    second: SpaceShip_3
+  - first:
+      213: -3354975917495902054
+    second: SpaceShip_4
+  - first:
+      213: -1527256811874030555
+    second: SpaceShip_5
+  - first:
+      213: 2211997933085889795
+    second: SpaceShip_6
+  - first:
+      213: 4691208086954403464
+    second: SpaceShip_7
+  - first:
+      213: -4591759893046792643
+    second: SpaceShip_8
+  - first:
+      213: 2165600352520834548
+    second: SpaceShip_9
+  - first:
+      213: -3150802165582724903
+    second: SpaceShip_10
+  - first:
+      213: -2475039936449506365
+    second: SpaceShip_11
+  - first:
+      213: -5267229712576031810
+    second: SpaceShip_12
+  - first:
+      213: -5019237979228830093
+    second: SpaceShip_13
+  - first:
+      213: -3178247750163051766
+    second: SpaceShip_14
+  - first:
+      213: 9198116499820666129
+    second: SpaceShip_15
+  - first:
+      213: 3096580554079651029
+    second: SpaceShip_16
+  - first:
+      213: 6423811238810196370
+    second: SpaceShip_17
+  - first:
+      213: -4538426944148222981
+    second: SpaceShip_18
+  - first:
+      213: -606812034006410155
+    second: SpaceShip_19
+  - first:
+      213: -770849542621349401
+    second: SpaceShip_20
+  - first:
+      213: -5116212536795159047
+    second: SpaceShip_21
+  - first:
+      213: 8812482805770649558
+    second: SpaceShip_22
+  - first:
+      213: 6577468821287801378
+    second: SpaceShip_23
+  - first:
+      213: 5160394740396216954
+    second: SpaceShip_24
+  - first:
+      213: 4549766424332817417
+    second: SpaceShip_25
+  - first:
+      213: -4415124358827079545
+    second: SpaceShip_26
+  - first:
+      213: -960795569836407570
+    second: SpaceShip_27
+  - first:
+      213: 6340274111826337227
+    second: SpaceShip_28
+  - first:
+      213: -2751229344941085917
+    second: SpaceShip_29
+  - first:
+      213: -192192016583883850
+    second: SpaceShip_30
+  - first:
+      213: -5133153708456753761
+    second: SpaceShip_31
+  - first:
+      213: -2258247425229686841
+    second: SpaceShip_32
+  - first:
+      213: -4883715400668568464
+    second: SpaceShip_33
+  - first:
+      213: 7065693329494337237
+    second: SpaceShip_34
+  - first:
+      213: 8573038256153020210
+    second: SpaceShip_35
+  - first:
+      213: 4721805418486667561
+    second: SpaceShip_36
+  - first:
+      213: -3432921456270616335
+    second: SpaceShip_37
+  - first:
+      213: 8487146240648332683
+    second: SpaceShip_38
+  - first:
+      213: 7844376906248125532
+    second: SpaceShip_39
+  - first:
+      213: 8884348782894553473
+    second: SpaceShip_40
+  - first:
+      213: 3364726960590158493
+    second: SpaceShip_41
+  - first:
+      213: -2960294703074708068
+    second: SpaceShip_42
+  - first:
+      213: 1358181429895992798
+    second: SpaceShip_43
+  - first:
+      213: 4361450661931717528
+    second: SpaceShip_44
+  - first:
+      213: 4005517597230076408
+    second: SpaceShip_45
+  - first:
+      213: 1866987062790095411
+    second: SpaceShip_46
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +181,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +212,66 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpaceShip_0
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 377
+        width: 431
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2140ea8cceae260800000000000000
+      internalID: 7127769706924348086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
