@@ -894,6 +894,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40521e1cc9dac766897d0e0e6bfbdb69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planetBadges:
+  - moonBadge
+  - marsBadge
+  - planetOneBadge
 --- !u!224 &824247409 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252285020697096, guid: aaa2c939c0359ac4dbce3f49e8b90252,
@@ -5340,7 +5344,7 @@ PrefabInstance:
     - target: {fileID: 4449105358601596651, guid: be440b33fa9148417ac10a3d669b8f2d,
         type: 3}
       propertyPath: m_JumpForce
-      value: 140
+      value: 160
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4449105358601596648, guid: be440b33fa9148417ac10a3d669b8f2d, type: 3}

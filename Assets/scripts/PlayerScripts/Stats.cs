@@ -14,7 +14,12 @@ public class Stats : MonoBehaviour
 
     
     // public static Stats instance;
-    public string[] planetBadges = new string[] {"moonBadge", "marsBadge", "planetOneBadge"};
+    // public string[] planetBadges = new string[] {"moonBadge", "marsBadge", "planetOneBadge"};
+    public List<string> planetBadges = new List<string>();
+
+    void Awake(){
+        planetBadges.Add("moonBadge");
+    }
     // public Transform respawnPoint;
     // public GameObject playerPrefab;
 
