@@ -16,20 +16,24 @@ public class ControlLevelSelection : Stats
     //find a way to use a dimmed version of the planet instead of an image
     // public GameObject[] stars;
     // public string[] planetsUnlocked = new string[] {"moonBadge", "marsBadge"};
-
-    private void Start(){
+    private void Start()
+    {
         // Debug.Log("HELLO" + planetBadges);
-        foreach (string badge in planetBadges)
-        {
-            Debug.Log(badge);
-            if(badge == "moonBadge"){moonUnlocked = true; UpdateLevelImage(moonUnlocked, moonUnlockImage);}
-            if(badge == "marsBadge"){marsUnlocked = true; UpdateLevelImage(marsUnlocked, marsUnlockImage);}
-            if(badge == "planetOneBadge"){planetOneUnlocked = true; UpdateLevelImage(planetOneUnlocked, planetOneUnlockImage);}
-        }
+        string[] tempPlanetBadges = planetBadges.ToArray();
+        // foreach (string badge in tempPlanetBadges)
+        // {
+            foreach(string somethin in tempPlanetBadges){
+                Debug.Log(somethin);
+            }
+            Debug.Log("hello from badges");
+            if(planetBadges.Contains("moonBadge")){moonUnlocked = true; UpdateLevelImage(moonUnlocked, moonUnlockImage);}
+            if(planetBadges.Contains("marsBadge")){marsUnlocked = true; UpdateLevelImage(marsUnlocked, marsUnlockImage);}
+            if(planetBadges.Contains("planetOneBadge")){planetOneUnlocked = true; UpdateLevelImage(planetOneUnlocked, planetOneUnlockImage);}
+        // }
 
         // UpdateLevelImage(moonUnlocked, moonUnlockImage);
     }
-    
+    //don't mind the variable names for updatelevelimage, its all handled in the void start() function
     private void UpdateLevelImage(bool moon, Image image)
     {
         if(moon == true){
