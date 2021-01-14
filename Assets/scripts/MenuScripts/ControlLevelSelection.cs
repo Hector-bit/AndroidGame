@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class ControlLevelSelection : Stats
 {
-    [SerializeField] private bool moonUnlocked = false;
-    [SerializeField] private bool marsUnlocked = false; 
-    [SerializeField] private bool planetOneUnlocked = false;
+    private bool moonUnlocked = false;
+    private bool marsUnlocked = false; 
+    private bool planetOneUnlocked = false;
 
     public Image moonUnlockImage; 
     public Image marsUnlockImage;
@@ -26,9 +26,13 @@ public class ControlLevelSelection : Stats
                 Debug.Log(somethin);
             }
             Debug.Log("hello from badges");
-            if(planetBadges.Contains("moonBadge")){moonUnlocked = true; UpdateLevelImage(moonUnlocked, moonUnlockImage);}
-            if(planetBadges.Contains("marsBadge")){marsUnlocked = true; UpdateLevelImage(marsUnlocked, marsUnlockImage);}
-            if(planetBadges.Contains("planetOneBadge")){planetOneUnlocked = true; UpdateLevelImage(planetOneUnlocked, planetOneUnlockImage);}
+            if(planetBadges.Contains("moonBadge") == true){moonUnlocked = true; UpdateLevelImage(moonUnlocked, moonUnlockImage);}
+            if(planetBadges.Contains("marsBadge") == true){marsUnlocked = true; UpdateLevelImage(marsUnlocked, marsUnlockImage);}
+            if(planetBadges.Contains("planetOneBadge") == true){planetOneUnlocked = true; UpdateLevelImage(planetOneUnlocked, planetOneUnlockImage);}
+
+            // for(int i = 0; i <= tempPlanetBadges.Length; i++;){
+            //     if()
+            // }
         // }
 
         // UpdateLevelImage(moonUnlocked, moonUnlockImage);

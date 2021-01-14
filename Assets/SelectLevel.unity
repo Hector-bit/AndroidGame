@@ -444,7 +444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &920421837
 RectTransform:
   m_ObjectHideFlags: 0
@@ -653,7 +653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1130761314
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1025,12 +1025,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetBadges:
-  - moonBadge
-  - marsBadge
-  - planetOneBadge
-  moonUnlocked: 0
-  marsUnlocked: 0
-  planetOneUnlocked: 0
+  - 
+  - 
+  - 
   moonUnlockImage: {fileID: 84308923}
   marsUnlockImage: {fileID: 920421838}
   planetOneUnlockImage: {fileID: 1130761315}
