@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class Victory : Stats
 {
+    public GameObject victoryScreen;
     // public playerBadgeCase = Stats.planetBadges;
     private string[] planetBadgesAvailable = {"marsBadge", "planetOneBadge", "moonBadge"};
     private string[] levelNames = {"Level1", "Level2", "Level3"};
@@ -32,6 +33,14 @@ public class Victory : Stats
         //first they will earn a badge for the current level
         planetBadges.Add(badgeToBeEarned);
         //second a victory canvas will appear
+    }
 
+    private void OnCollisionEnter2D(Collision2D collis){
+    if(collis.gameObject.CompareTag("Player")){
+            victoryScreen.gameObject.SetActive(true);
+            ReachedTheSpaceship();
+            } else {
+                victoryScreen.gameObject.SetActive(false);
+            }
     }
 } 
