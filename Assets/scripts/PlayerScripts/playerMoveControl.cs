@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerMoveControl : MonoBehaviour
 {
     public myCharCont controller;
-    // // public Animator animator;
+    public Animator animator;
     public Joystick joystick;
 
     public float swingForce = 2f;
@@ -27,20 +27,15 @@ public class playerMoveControl : MonoBehaviour
     {
         playerSprite = GetComponent<SpriteRenderer>();
         rBody = GetComponent<Rigidbody2D>();
+        // animator = controller.GetComponent<GameObject>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (joystick.Horizontal >= .2f){
-            horizontalMove = speed;
-        } else if (joystick.Horizontal <= -.2f){
-            horizontalMove = -speed;
-        } else {
-            horizontalMove = 0f;
-        }
+        horizontalMove = joystick.Horizontal * speed;
 
-        // animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         float verticalMove = joystick.Vertical;
 
@@ -52,6 +47,13 @@ public class playerMoveControl : MonoBehaviour
 
     void FixedUpdate()
     {
+        // if (joystick.Horizontal >= .2f){
+        //     horizontalMove = speed;
+        // } else if (joystick.Horizontal <= -.2f){
+        //     horizontalMove = -speed;
+        // } else {
+        //     horizontalMove = 0f;
+        // }
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, IsJumping);
         IsJumping = false;
     }
