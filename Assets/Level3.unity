@@ -2785,7 +2785,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -161.5, y: 68.2}
+  m_AnchoredPosition: {x: -161.5, y: 86.91}
   m_SizeDelta: {x: 60, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1324529664
@@ -5641,6 +5641,21 @@ PrefabInstance:
       propertyPath: victoryScreen
       value: 
       objectReference: {fileID: 1689869674}
+    - target: {fileID: 5888582242146543602, guid: a4f0222635a4cda09a11d2f0eef56579,
+        type: 3}
+      propertyPath: moonCompleted
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888582242146543602, guid: a4f0222635a4cda09a11d2f0eef56579,
+        type: 3}
+      propertyPath: planetOneCompleted
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888582242146543602, guid: a4f0222635a4cda09a11d2f0eef56579,
+        type: 3}
+      propertyPath: marsCompleted
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5888582242146543607, guid: a4f0222635a4cda09a11d2f0eef56579,
         type: 3}
       propertyPath: m_Name
