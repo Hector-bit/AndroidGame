@@ -6,7 +6,7 @@ public static class SaveSystem
 {
     public static void SaveLevel (Victory levelPassed){
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/player.fun";
+        string path = Path.Combine(Application.persistentDataPath, "levelPassed.fun");
         FileStream stream = new FileStream(path, FileMode.Create);
 
         Stats data = new Stats(levelPassed);
@@ -16,7 +16,7 @@ public static class SaveSystem
     }
 
     public static Stats LoadLevel (){
-        string path = Application.persistentDataPath + "/Player.fun";
+        string path = Path.Combine(Application.persistentDataPath, "levelPassed.fun");
         if (File.Exists(path)){
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);

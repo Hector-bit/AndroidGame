@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class ControlLevelSelection : MonoBehaviour
 {
-    private bool moonUnlocked = true;
-    private bool marsUnlocked = false;
-    private bool planetOneUnlocked = false;
+    public bool moonUnlocked = true;
+    public bool marsUnlocked = false;
+    public bool planetOneUnlocked = false;
 
-    private bool moonCompleted;
-    private bool marsCompleted;
-    private bool planetOneCompleted;
+    public bool moonCompleted;
+    public bool marsCompleted;
+    public bool planetOneCompleted;
 
     public Image moonUnlockImage; 
     public Image marsUnlockImage;
@@ -47,8 +47,8 @@ public class ControlLevelSelection : MonoBehaviour
             // }
             // Debug.Log("hello from badges");
             // if(moonCompleted == true){moonUnlocked = true; UpdateLevelImage(moonUnlocked, moonUnlockImage);}
-        if(marsCompleted == true){marsUnlocked = true; UpdateLevelImage(marsUnlocked, marsUnlockImage);}
-        if(planetOneCompleted == true){planetOneUnlocked = true; UpdateLevelImage(planetOneUnlocked, planetOneUnlockImage);}
+        if(marsUnlocked == true){UpdateLevelImage(marsUnlocked, marsUnlockImage);}
+        if(planetOneUnlocked == true){UpdateLevelImage(planetOneUnlocked, planetOneUnlockImage);}
 
             // for(int i = 0; i <= tempPlanetBadges.Length; i++;){
             //     if()
@@ -63,7 +63,11 @@ public class ControlLevelSelection : MonoBehaviour
         moonCompleted = data.moonCompleted;
         marsCompleted = data.marsCompleted;
         planetOneCompleted = data.planetOneCompleted;
+        Debug.Log(data.moonCompleted + "from loadlevel");
+        Debug.Log(data.marsCompleted + "from loadlevel");
+        Debug.Log(data.planetOneCompleted + "from loadlevel");
     }
+
     //don't mind the variable names for updatelevelimage, its all handled in the void start() function
     private void UpdateLevelImage(bool moon, Image image)
     {

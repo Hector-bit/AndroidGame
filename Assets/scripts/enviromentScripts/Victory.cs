@@ -36,10 +36,10 @@ public class Victory : MonoBehaviour
     void ReachedTheSpaceship()
     {
         //Save progress of level 
-        SaveSystem.SaveLevel(this);
         if(badgeToBeEarned == "moonBadge"){moonCompleted = true;}
         if(badgeToBeEarned == "marsBadge"){marsCompleted = true;}
         if(badgeToBeEarned == "planetOneCompleted"){planetOneCompleted = true;}
+        SaveSystem.SaveLevel(this);
     }
 
     private void OnCollisionEnter2D(Collision2D collis){

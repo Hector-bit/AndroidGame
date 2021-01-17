@@ -1024,6 +1024,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e3687067a91dd7f8bbfc8978e9375c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moonUnlocked: 1
+  marsUnlocked: 0
+  planetOneUnlocked: 0
   moonCompleted: 0
   marsCompleted: 0
   planetOneCompleted: 0
