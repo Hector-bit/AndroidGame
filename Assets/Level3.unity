@@ -1788,7 +1788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &992055654
 Animator:
   serializedVersion: 3
@@ -1837,8 +1837,8 @@ MonoBehaviour:
   - {fileID: 466409637}
   - {fileID: 1331003430}
   m_Bounds:
-    m_Center: {x: -0.0059295893, y: -0.002376318, z: 0}
-    m_Extent: {x: 0.9675919, y: 1.8029006, z: 0}
+    m_Center: {x: 0.0017083883, y: 0.024932027, z: 0}
+    m_Extent: {x: 0.9752308, y: 1.7755923, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!114 &992055657
@@ -1912,7 +1912,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992055653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6, y: 7.19, z: 0}
+  m_LocalPosition: {x: 4.25, y: -1.27, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 845317996}
@@ -2785,7 +2785,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -161.5, y: 68.2}
+  m_AnchoredPosition: {x: -161.5, y: 86.91}
   m_SizeDelta: {x: 60, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1324529664
@@ -5641,6 +5641,21 @@ PrefabInstance:
       propertyPath: victoryScreen
       value: 
       objectReference: {fileID: 1689869674}
+    - target: {fileID: 5888582242146543602, guid: a4f0222635a4cda09a11d2f0eef56579,
+        type: 3}
+      propertyPath: moonCompleted
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888582242146543602, guid: a4f0222635a4cda09a11d2f0eef56579,
+        type: 3}
+      propertyPath: planetOneCompleted
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888582242146543602, guid: a4f0222635a4cda09a11d2f0eef56579,
+        type: 3}
+      propertyPath: marsCompleted
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5888582242146543607, guid: a4f0222635a4cda09a11d2f0eef56579,
         type: 3}
       propertyPath: m_Name

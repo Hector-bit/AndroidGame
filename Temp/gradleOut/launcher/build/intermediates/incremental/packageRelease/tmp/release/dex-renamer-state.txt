@@ -1,0 +1,4 @@
+#Sun Jan 17 06:18:39 PST 2021
+base.0=/home/hector/Desktop/AndroidGame/Temp/gradleOut/launcher/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex
