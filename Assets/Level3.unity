@@ -1788,7 +1788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &992055654
 Animator:
   serializedVersion: 3
@@ -1837,8 +1837,8 @@ MonoBehaviour:
   - {fileID: 466409637}
   - {fileID: 1331003430}
   m_Bounds:
-    m_Center: {x: 0.0017083883, y: 0.024932027, z: 0}
-    m_Extent: {x: 0.9752308, y: 1.7755923, z: 0}
+    m_Center: {x: -0.0059295893, y: -0.0023759604, z: 0}
+    m_Extent: {x: 0.96759284, y: 1.8029006, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!114 &992055657
