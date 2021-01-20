@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class ControlLevelSelection : MonoBehaviour
 {
-    public bool moonUnlocked = true;
-    public bool marsUnlocked = false;
-    public bool planetOneUnlocked = false;
+    public bool moonUnlocked;
+    public bool marsUnlocked;
+    public bool planetOneUnlocked;
 
     public bool moonCompleted;
     public bool marsCompleted;
@@ -32,30 +32,17 @@ public class ControlLevelSelection : MonoBehaviour
     private void Awake()
     {
         LoadLevel();
+        LoadControlLevelSelection();
         if(moonCompleted == true){
             marsUnlocked = true;
         }
         if(marsCompleted == true){
             planetOneUnlocked = true;
         }
-        // Debug.Log("HELLO" + planetBadges);
-        // string[] tempPlanetBadges = planetBadges.ToArray();
-        // foreach (string badge in tempPlanetBadges)
-        // {
-            // foreach(string somethin in tempPlanetBadges){
-            //     Debug.Log(somethin);
-            // }
-            // Debug.Log("hello from badges");
-            // if(moonCompleted == true){moonUnlocked = true; UpdateLevelImage(moonUnlocked, moonUnlockImage);}
+
         if(marsUnlocked == true){UpdateLevelImage(marsUnlocked, marsUnlockImage);}
         if(planetOneUnlocked == true){UpdateLevelImage(planetOneUnlocked, planetOneUnlockImage);}
-
-            // for(int i = 0; i <= tempPlanetBadges.Length; i++;){
-            //     if()
-            // }
-        // }
-
-        // UpdateLevelImage(moonUnlocked, moonUnlockImage);
+        SaveSystem.SaveControlLevelSelection(this);
     }
 
     public void LoadLevel(){
@@ -63,12 +50,16 @@ public class ControlLevelSelection : MonoBehaviour
         moonCompleted = data.moonCompleted;
         marsCompleted = data.marsCompleted;
         planetOneCompleted = data.planetOneCompleted;
-        Debug.Log(data.moonCompleted + "from loadlevel");
-        Debug.Log(data.marsCompleted + "from loadlevel");
-        Debug.Log(data.planetOneCompleted + "from loadlevel");
     }
 
-    //don't mind the variable names for updatelevelimage, its all handled in the void start() function
+    public void LoadControlLevelSelection(){
+        StatsLevel data = SaveSystem.LoadControlLevelSelection();
+        moonUnlocked = data.moonUnlocked;
+        marsUnlocked = data.marsUnlocked;
+        planetOneUnlocked = data.planetOneUnlocked;
+    }
+
+    //This small bit of code makes the planet object appear
     private void UpdateLevelImage(bool moon, Image image)
     {
         if(moon == true){
@@ -76,10 +67,5 @@ public class ControlLevelSelection : MonoBehaviour
         } else {
             image.gameObject.SetActive(false);
         }
-        // if(mars == true){
-        //     unlockImage.gameObject.SetActive(true);
-        // } else {
-        //     unlockImage.gameObject.SetActive(false);
-        // }
     }
 }

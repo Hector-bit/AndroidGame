@@ -41,7 +41,13 @@ public class playerMoveControl : MonoBehaviour
 
         if(verticalMove >= .5f){
             IsJumping = true;
-            // animator.SetBool("IsJumping", true);
+            animator.SetBool("IsJumping", true);
+        }
+
+        if(isSwinging == true){
+            animator.SetBool("IsSwinging", true);
+        } else {
+            animator.SetBool("IsSwinging", false);
         }
     }
 
