@@ -22,7 +22,7 @@ public class Victory : MonoBehaviour
 
     void Start()
     {   //figures out which level we're on and which badge can be earned
-        Scene currentScene = SceneManager.GetActiveScene(); 
+        Scene currentScene = SceneManager.GetActiveScene();
         for(int i = 0; i < levelNames.Length; i ++){
             if(levelNames[i] == currentScene.name){
                 // planetBadgesAvailable[i + 1] ? badgeToBeEarned = planetBadgesAvailable[i + 1] : badgeToBeEarned = planetBadgesAvailable[i];

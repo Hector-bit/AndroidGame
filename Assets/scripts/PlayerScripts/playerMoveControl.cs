@@ -44,9 +44,6 @@ public class playerMoveControl : MonoBehaviour
             animator.SetBool("IsJumping", true);
         }
 
-        //the reason this is here is because GrappeObject does
-        //not run when isSwinging is off but it needs to run in
-        //order to turn off IsSwinging for the animator
         if(isSwinging == true){
             animator.SetBool("IsSwinging", true);
         } else {

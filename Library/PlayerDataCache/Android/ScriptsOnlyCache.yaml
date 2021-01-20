@@ -44,8 +44,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -106,9 +108,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12392}
     - Class: 114
+      Script: {instanceID: 12766}
+    - Class: 114
       Script: {instanceID: 12888}
     - Class: 114
       Script: {instanceID: 12892}
+    - Class: 114
+      Script: {instanceID: 13380}
     - Class: 114
       Script: {instanceID: 13476}
     - Class: 114
@@ -205,9 +211,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12392}
     - Class: 114
+      Script: {instanceID: 12766}
+    - Class: 114
       Script: {instanceID: 12888}
     - Class: 114
       Script: {instanceID: 12892}
+    - Class: 114
+      Script: {instanceID: 13380}
     - Class: 114
       Script: {instanceID: 13476}
     - Class: 114
