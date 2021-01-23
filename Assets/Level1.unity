@@ -20205,8 +20205,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784546711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.24, y: -0.54, z: 22.157227}
-  m_LocalScale: {x: 4.0218654, y: 4.130076, z: 2}
+  m_LocalPosition: {x: 0.5, y: 0.24, z: 22.157227}
+  m_LocalScale: {x: 5.0133424, y: 5.1781235, z: 2}
   m_Children: []
   m_Father: {fileID: 153254006}
   m_RootOrder: 1
@@ -20735,6 +20735,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 376021228}
+    - target: {fileID: 3762690138107753334, guid: 4dc9ab91ed3e1c582a49418f2819960c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 44.899994
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc9ab91ed3e1c582a49418f2819960c, type: 3}
 --- !u!1001 &4449105358709803507
@@ -20934,6 +20939,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music
       objectReference: {fileID: 0}
+    - target: {fileID: 8702613672117474996, guid: a0e9d5198fa47d09abfa26dafb7c1479,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b3b205d483fefffe2b51a7872960edfa, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0e9d5198fa47d09abfa26dafb7c1479, type: 3}
 --- !u!1001 &5888582241570734574

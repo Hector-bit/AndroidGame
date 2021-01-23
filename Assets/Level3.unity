@@ -676,6 +676,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music
       objectReference: {fileID: 0}
+    - target: {fileID: 8702613672117474996, guid: a0e9d5198fa47d09abfa26dafb7c1479,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b3b205d483fefffe2b51a7872960edfa, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0e9d5198fa47d09abfa26dafb7c1479, type: 3}
 --- !u!1 &845317995
@@ -1041,6 +1046,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762690138107753334, guid: 4dc9ab91ed3e1c582a49418f2819960c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 44.899994
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc9ab91ed3e1c582a49418f2819960c, type: 3}
